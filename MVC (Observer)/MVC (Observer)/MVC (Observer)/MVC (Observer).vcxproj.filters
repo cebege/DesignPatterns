@@ -21,5 +21,11 @@
     <ClCompile Include="AchievementTracker.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Overview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StateManagement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

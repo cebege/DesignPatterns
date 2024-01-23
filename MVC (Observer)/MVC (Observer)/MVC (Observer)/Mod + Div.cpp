@@ -2,33 +2,33 @@
 //#include <list>
 //using namespace std;
 //
-//// Forward declaration
-//class Observer;
-//
-//// The Observer pattern is used to create a subscription mechanism where multiple objects (observers) 
+//// forward declaration
+//class observer;
+
+//// the observer pattern is used to create a subscription mechanism where multiple objects (observers) 
 //// are listening to and reacting to events or changes in another object 
-//// (the subject or model). When the subject changes its state, it automatically notifies all its observers.
+//// (the subject or model). when the subject changes its state, it automatically notifies all its observers.
 //
-//// Model; reprents the subject in the Observer Pattern.
-//class Model {
+//// model; reprents the subject in the observer pattern.
+//class model {
 //
 //    int value; // some value of data.
-//    list<Observer*> observers; // A list of observers that are interested in changes to the model.
-//
+//    list<observer*> observers; // a list of observers that are interested in changes to the model.
+
 //public:
 //
-//    void attach(Observer* obs) //  Adds an observer to the list
+//    void attach(observer* obs) //  adds an observer to the list
 //    {
 //        observers.push_back(obs);
 //    }
 //
-//    void setVal(int val) // Sets the model's value and calls notify() to inform all observers about the change.
+//    void setval(int val) // sets the model's value and calls notify() to inform all observers about the change.
 //    {
 //        value = val;
 //        notify();
 //    }
 //
-//    int getVal() const // Returns the current value.
+//    int getval() const // returns the current value.
 //    {
 //        return value;
 //    }
@@ -36,58 +36,58 @@
 //    void notify();
 //};
 //
-//// Observer; an abstract class for observers watching the model. Each observer is associated with a model and a divisor.
-//class Observer {
+//// observer; an abstract class for observers watching the model. each observer is associated with a model and a divisor.
+//class observer {
 //
-//    Model& model;
+//    model& model;
 //    int denom;
 //
 //public:
-//    Observer(Model& mod, int div) : model(mod), denom(div) 
+//    observer(model& mod, int div) : model(mod), denom(div) 
 //    {
-//        model.attach(this); // Constructor that attaches the observer to a model.
+//        model.attach(this); // constructor that attaches the observer to a model.
 //    }
 //
 //    virtual void update() = 0;
 //
 //protected:
-//    Model& getModel() const 
+//    model& getmodel() const 
 //    {
 //        return model;
 //    }
 //
-//    int getDivisor() const 
+//    int getdivisor() const 
 //    {
 //        return denom;
 //    }
 //};
 //
-//void Model::notify() {
-//    for (Observer* obs : observers) 
+//void model::notify() {
+//    for (observer* obs : observers) 
 //    {
 //        obs->update();
 //    }
 //}
 //
-//// Concrete Observers
-//class DivObserver : public Observer {
+//// concrete observers
+//class divobserver : public observer {
 //public:
-//    DivObserver(Model& mod, int div) : Observer(mod, div) {}
+//    divobserver(model& mod, int div) : observer(mod, div) {}
 //
 //    void update() override 
 //    {
-//        int v = getModel().getVal(), d = getDivisor();
+//        int v = getmodel().getval(), d = getdivisor();
 //        cout << v << " div " << d << " is " << v / d << '\n';
 //    }
 //};
 //
-//class ModObserver : public Observer {
+//class modobserver : public observer {
 //public:
-//    ModObserver(Model& mod, int div) : Observer(mod, div) {}
+//    modobserver(model& mod, int div) : observer(mod, div) {}
 //
 //    void update() override 
 //    {
-//        int v = getModel().getVal(), d = getDivisor();
+//        int v = getmodel().getval(), d = getdivisor();
 //        cout << v << " mod " << d << " is " << v % d << '\n';
 //    }
 //};

@@ -129,6 +129,8 @@
   <ItemGroup>
     <ClCompile Include="Mod + Div.cpp" />
     <ClCompile Include="AchievementTracker.cpp" />
+    <ClCompile Include="Overview.cpp" />
+    <ClCompile Include="StateManagement.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
